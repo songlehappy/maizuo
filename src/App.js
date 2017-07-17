@@ -3,11 +3,7 @@ import React, { Component } from 'react';
 // ui组件一定要关联一个 容器组件 且用connect 方法
 import { connect } from 'react-redux';
 
-// import { Steps, Button, WhiteSpace } from 'antd-mobile';
-
-
-// var Step = Steps.Step;
-
+import NavBar from './components/NavBar.js';
 
 //创建UI组件
 class uApp extends Component {
@@ -15,8 +11,8 @@ class uApp extends Component {
 		// console.log(Step);
 		return (
 			<div>
+				<NavBar />
 				
-
 				<h1>biaoti</h1>
 			</div>
 		);

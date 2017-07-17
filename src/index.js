@@ -3,6 +3,9 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 
+//重置css样式
+// import './css/reset.css';
+
 //引入store
 import store from './redux/store.js';
 
