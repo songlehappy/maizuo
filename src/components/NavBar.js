@@ -11,9 +11,9 @@ class NavBar extends Component {
                    <div className="" ><i className="iconfont">&#xe602;</i></div> 
                    <div>卖座电影</div> 
                 </div> 
-                <div className="header_l">
-                   <div>深圳</div>
-                   <div></div>
+                <div className="header_r">
+                   <div>深圳<i className="iconfont">&#xe615;</i></div>
+                   <div><i className="iconfont">&#xe745;</i></div>
                 </div> 
             </div>
         )

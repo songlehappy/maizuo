@@ -10,7 +10,7 @@ address, caption, cite, code, dfn, th, var { font-style:normal; font-weight:norm
 
 ul, ol { list-style:none; }
 
-body { color:#333; font:12px/20px "SimSun","宋体","Arial Narrow",HELVETICA; background:#fff;/* overflow-y:scroll;*/ overflow-x:hidden;}
+body { color:#333; font:12px 'inherit'; background:#fff;/* overflow-y:scroll;*/ overflow-x:hidden;}
 
 a { color:#666; text-decoration:none; }
 
