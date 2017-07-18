@@ -20,3 +20,9 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+# 忽略*.scss文件
+*.scss
+
+# my_back_end
+/my_back_end/node_modules
+

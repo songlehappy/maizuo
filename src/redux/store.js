@@ -7,7 +7,8 @@ import reducer from './reducer.js';
 
 //定义state的初始状态
 var state = {
-
+    open: false,
+    
 }
 
 var store = createStore(reducer, state)

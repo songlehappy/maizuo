@@ -3,7 +3,10 @@ import React, { Component } from 'react';
 // ui组件一定要关联一个 容器组件 且用connect 方法
 import { connect } from 'react-redux';
 
-import NavBar from './components/NavBar.js';
+import Nav from './components/NavBar.js';
+import First from './components/subindex.js';
+
+
 
 //创建UI组件
 class uApp extends Component {
@@ -11,9 +14,9 @@ class uApp extends Component {
 		// console.log(Step);
 		return (
 			<div>
-				<NavBar />
+				<Nav />
+				<First />
 				
-				<h1>biaoti</h1>
 			</div>
 		);
 	}

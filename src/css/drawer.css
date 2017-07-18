@@ -1,0 +1,32 @@
+
+.am-drawer{
+     z-index: 201;
+     top:2.1333rem; 
+     position: fixed;
+}
+ .my-drawer .am-drawer-sidebar{
+   height: 100%;
+   overflow: hidden;
+  /* display: none; */
+}  
+
+.navLeft{
+    position: relative;
+    
+    width:11rem;
+    height: 100%; 
+    border-top: 1px solid #222;
+    box-shadow: 0 1px 1px #363636 inset;
+    background: #282828;
+  }
+ 
+.navLeft ul li a{
+    display: block;
+    width:100%;
+    padding:0 1rem;
+    line-height: 2.1333rem;
+    font-size: 0.55467rem;
+    color:#999;
+    box-sizing: border-box;
+    border-bottom: 1px dotted #999;
+} 
