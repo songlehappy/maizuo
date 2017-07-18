@@ -7,7 +7,6 @@ import Nav from './components/NavBar.js';
 import First from './components/subindex.js';
 
 
-
 //创建UI组件
 class uApp extends Component {
 	render() {
@@ -16,10 +15,14 @@ class uApp extends Component {
 			<div>
 				<Nav />
 				<First />
-				
 			</div>
 		);
 	}
+
+	//
+	// componentDidMount(){
+
+	// }
 }
 
 // 基于UI组件创建出 容器组件

@@ -45,3 +45,13 @@
       .header .header_r div i {
         font-weight: 600;
         font-size: 0.768rem; }
+
+.activityIndicator{
+  position: absolute;
+  right:0;
+  top:0.7rem;
+}
+.am-activity-indicator-spinner-lg{
+  width:1rem;
+  height: 0.6rem;
+}

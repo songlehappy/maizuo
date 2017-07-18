@@ -51,7 +51,7 @@ router.get('/now', function (req, res, next) {
 
 })
 
-//正在热映 localhost:8080/coming
+//即将上映 localhost:8080/coming
 router.get('/coming', function (req, res, next) {
     var d = new Date().getTime();
     http.get('http://m.maizuo.com/v4/api/film/coming-soon?__t'+d+'&page=1&count=3', function(value){

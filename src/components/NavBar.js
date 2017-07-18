@@ -3,6 +3,8 @@ import React, { Component } from 'react';
 // ui组件一定要关联一个 容器组件 且用connect 方法
 import { connect } from 'react-redux';
 
+import { ActivityIndicator } from 'antd-mobile';
+
 import '../css/navbar.css';
 import '../css/iconfont/iconfont.css';
 
@@ -17,6 +19,11 @@ class uNav extends Component {
                 <div className="header_r">
                    <div>深圳<i className="iconfont">&#xe615;</i></div>
                    <div><i className="iconfont">&#xe745;</i></div>
+                   <ActivityIndicator 
+                        className='activityIndicator'
+                        size='large'
+                        animating={this.props.animating}
+                   />
                 </div> 
             </div>
         )
@@ -27,7 +34,7 @@ class uNav extends Component {
 var Nav = connect(
     function(state, ownProps){
         return{
-            
+            animating: state.animating
         }
     },
     function(dispatch, ownProps){

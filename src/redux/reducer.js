@@ -15,13 +15,37 @@ function reducer(state, action) {
             return Object.assign({}, state, {
                 open: !flag2,
             })
-        //确认点击首页、影片&
-        // case "SURE_CLICK":
-        //     console.log(flag3);
-        //     var flag3 = state.open;
-        //     return Object.assign({}, state, {
-        //         open: !flag3,
-        //     })
+        //请求数据前
+        case "DATA_START":
+           
+            
+            return Object.assign({}, state, {
+               animating: true,
+            })
+         //轮播请求数据结束
+        case "DATA_END":
+           
+            
+            return Object.assign({}, state, {
+               animating: false,
+               data_carousel: action.data
+            })
+        //now请求数据结束
+        case "NOW_DATA_END":
+           
+            
+            return Object.assign({}, state, {
+               animating: false,
+               data_nowing: action.data
+            })
+        //coming请求数据结束
+        case "COME_DATA_END":
+           
+            
+            return Object.assign({}, state, {
+               animating: false,
+               data_coming: action.data
+            })
         default:
             return state;
     }

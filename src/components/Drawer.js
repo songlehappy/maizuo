@@ -4,10 +4,16 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 import { Drawer } from 'antd-mobile';
-import { NavLink } from 'react-router-dom';
+import {  Route, NavLink } from 'react-router-dom';
 
 
 import '../css/drawer.css';
+
+
+import Index from './Index.js';
+import Video from './Video.js';
+import Cinema from './Cinema.js';
+import Login from './Login.js';
 
 class uDraw extends Component {
 
@@ -15,13 +21,13 @@ class uDraw extends Component {
         const sidebar = (
             <div className="navLeft">
                 <ul>
-                     <li> <NavLink onClick={this.props.onOpenChange} to="/index">首页</NavLink> </li>
-                     <li> <NavLink onClick={this.props.onOpenChange} to="/video">影片</NavLink> </li>
+                    <li> <NavLink onClick={this.props.onOpenChange} to="/index">首页</NavLink> </li>
+                    <li> <NavLink onClick={this.props.onOpenChange} to="/video">影片</NavLink> </li>
                     <li> <NavLink onClick={this.props.onOpenChange} to="/cinema">影院</NavLink> </li>
                     <li> <NavLink onClick={this.props.onOpenChange} to="/index">商城(空)</NavLink> </li>
                     <li> <NavLink onClick={this.props.onOpenChange} to="/index">演出(空)</NavLink> </li>
                     <li> <NavLink onClick={this.props.onOpenChange} to="/login">我的</NavLink> </li>
-                    <li> <NavLink onClick={this.props.onOpenChange} to="/index">卖座卡(空)</NavLink> </li>    
+                    <li> <NavLink onClick={this.props.onOpenChange} to="/index">卖座卡(空)</NavLink> </li>
                 </ul>
             </div>
         );
@@ -29,11 +35,17 @@ class uDraw extends Component {
         return (<div>
             <Drawer
                 className="my-drawer"
-                open = {this.props.open}
+                open={this.props.open}
                 sidebar={sidebar}
                 onOpenChange={this.props.onOpenChange}
             >
-            
+                <div>
+                    <Route exact path="/" component={Index} />
+                    <Route path="/Index" component={Index} />
+                    <Route path="/video" component={Video} />
+                    <Route path="/cinema" component={Cinema} />
+                    <Route path="/login" component={Login} />
+                </div>
             </Drawer>
         </div>);
     }
@@ -41,14 +53,14 @@ class uDraw extends Component {
 
 
 var Draw = connect(
-    function(state, ownProps){
-        return{
+    function (state, ownProps) {
+        return {
             open: state.open
         }
     },
-    function(dispatch, owmProps){
+    function (dispatch, owmProps) {
         return {
-            onOpenChange: function(){
+            onOpenChange: function () {
                 dispatch({
                     type: 'LEFT_NAV_APPEAR',
                 })

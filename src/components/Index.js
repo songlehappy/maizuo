@@ -1,18 +1,27 @@
 import React, { Component } from 'react';
 
+
 // ui组件一定要关联一个 容器组件 且用connect 方法
 import { connect } from 'react-redux';
 
+import { Button } from 'antd-mobile';
+
+//自己的子组件
 import MyCarousel from './subcomponents/Carousel.js';
+import Now from './subcomponents/Now.js';
+import Coming from './subcomponents/Coming.js';
+
 class uIndex extends Component {
 	render(){
 		return (
-			<div style={{position:'relative',zIndex:this.props.open?0:203}}>
+			<div>
 				<MyCarousel />
-				<h2>我是Index</h2>
-				<h2>我是Index</h2>
-				<h2>我是Index</h2>
-				<h2>我是Index</h2>
+				<Now />
+				<div className="middle">
+					<div></div>
+					<Button disabled type="primary" inline size="large">即将上映</Button>
+				</div>
+				<Coming />
 			</div>
 		)
 	}
@@ -24,8 +33,10 @@ var Index = connect(
 			open: state.open,
 		}
 	},
-	function(){
+	function(dispatch){
+		return {
 
+		}
 	}
 )(uIndex);
 
