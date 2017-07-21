@@ -3,21 +3,34 @@ import React, { Component } from 'react';
 // ui组件一定要关联一个 容器组件 且用connect 方法
 import { connect } from 'react-redux';
 
+import { BrowserRouter as Router } from 'react-router-dom';
+
 import Nav from './components/NavBar.js';
 import First from './components/subindex.js';
+
+
+
+
 
 
 //创建UI组件
 class uApp extends Component {
 	render() {
+
 		// console.log(Step);
 		return (
-			<div>
-				<Nav />
-				<First />
-			</div>
+			<Router>
+				<div>
+					<Nav />
+					<First />
+				</div>
+			</Router>
 		);
 	}
+
+	// componentDidMount() {
+	// 	// goscroll();
+	// }
 
 	//
 	// componentDidMount(){
@@ -32,16 +45,14 @@ var App = connect(
 	// 2. ui组件上的方法操作
 	function (state, ownProps) {
 		return {
-			biaoti: state.title,
-			btnname: state.name
+
 		}
 	},
 	function (dispatch, ownProps) {
 		return {
 			change: function () {
 				dispatch({
-					type: 'CHANGE_TITLE',
-					title: '详情页'
+
 				})
 			}
 		}

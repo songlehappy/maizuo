@@ -14,11 +14,11 @@ class uNav extends Component {
             <div className="header">
                 <div className="header_l" onClick={this.props.leftHead}>
                    <div className="" ><i className="iconfont">&#xe602;</i></div> 
-                   <div>卖座电影</div> 
+                   <div>{this.props.head}</div> 
                 </div> 
                 <div className="header_r">
                    <div>深圳<i className="iconfont">&#xe615;</i></div>
-                   <div><i className="iconfont">&#xe745;</i></div>
+                   <div><a href="http://localhost:3000/login"><i className="iconfont">&#xe745;</i></a></div>
                    <ActivityIndicator 
                         className='activityIndicator'
                         size='large'
@@ -34,7 +34,8 @@ class uNav extends Component {
 var Nav = connect(
     function(state, ownProps){
         return{
-            animating: state.animating
+            animating: state.animating,
+            head: state.data_head,
         }
     },
     function(dispatch, ownProps){

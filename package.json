@@ -96,6 +96,7 @@
     "babel-plugin-import": "^1.2.1",
     "less": "^2.7.2",
     "less-loader": "^4.0.5",
+    "mongodb": "^2.2.30",
     "postcss-pxtorem": "^4.0.1",
     "svg-sprite-loader": "^0.3.1"
   }

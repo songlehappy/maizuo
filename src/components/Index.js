@@ -10,6 +10,7 @@ import { Button } from 'antd-mobile';
 import MyCarousel from './subcomponents/Carousel.js';
 import Now from './subcomponents/Now.js';
 import Coming from './subcomponents/Coming.js';
+import Gotop from './subcomponents/Gotop.js';
 
 class uIndex extends Component {
 	render(){
@@ -25,17 +26,29 @@ class uIndex extends Component {
 			</div>
 		)
 	}
+
+	componentDidMount(){
+		this.props.changeHead();
+		Gotop();
+	}
+	
 }
 
 var Index = connect(
 	function(state){
 		return {
 			open: state.open,
+			head: state.data_head
 		}
 	},
 	function(dispatch){
 		return {
-
+			changeHead:function(){
+				dispatch({
+					type:'CHANGE_HEAD',
+					data: '卖座电影'
+				})
+			}
 		}
 	}
 )(uIndex);

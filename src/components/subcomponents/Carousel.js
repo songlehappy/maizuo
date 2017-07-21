@@ -20,7 +20,7 @@ class uMyCarousel extends Component {
                 >
                     {this.props.data.map(ii => (
 
-                        <a href="http://www.baidu.com" key={ii} >
+                        <a key={ii} >
 
                             <img
                                 style={{ width: '100%', height: '100%' }}
@@ -46,17 +46,17 @@ var MyCarousel = connect(
             data: state.data_carousel,
         }
     },
-    function (dispactch) {
+    function (dispatch) {
         return {
             getData: function () {
-                dispactch({
+                dispatch({
                     type: 'DATA_START'
                 })
 
 
                 $.get('http://localhost:8080/lunbo', function (res) {
                     var list = res.data.billboards;
-                    dispactch({
+                    dispatch({
                         type: 'DATA_END',
                         data: list
                     })

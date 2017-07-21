@@ -16,6 +16,6 @@ a { color:#666; text-decoration:none; }
 
 a:visited { color:#666; }
 
-a:hover, a:active, a:focus { color:#ff8400; text-decoration:underline; }
+/* a:hover, a:active, a:focus { color:#ff8400; text-decoration:underline; } */
 
 .clear{clear:both;}
